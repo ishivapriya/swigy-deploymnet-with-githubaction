@@ -17,12 +17,12 @@ jobs:
           fetch-depth: 0  # Ensures full history for accurate SonarQube analysis
 
       - name: SonarQube Scan
-        uses: sonarsource/sonarqube-scan-action@master
+         - uses: sonarsource/sonarqube-scan-action@master
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         with:
           args: >
-            -Dsonar.projectKey=swiggy
-            -Dsonar.projectName=swiggy
+            -Dsonar.projectKey=Swiggy
+            -Dsonar.projectName=Swiggy
             -Dsonar.sources=.
